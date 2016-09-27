@@ -2,6 +2,9 @@ package br.com.desktop.agendaenderecos.modelo;
 
 import java.time.LocalDate;
 
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+import br.com.desktop.agendaenderecos.util.LocalDateAdapter;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -95,7 +98,8 @@ public class Pessoa {
     public StringProperty cidadeProperty() {
         return cidade;
     }
-
+    
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     public LocalDate getDataNascimento() {
         return dataNascimento.get();
     }
