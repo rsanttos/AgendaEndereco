@@ -110,6 +110,17 @@ public class RootLayoutController {
 	}
 
 	/**
+	 * Abre uma janela de Edição.
+	 */
+	@FXML
+	private void handleEdit() {
+		Alert alert = new Alert(AlertType.WARNING);
+		alert.setTitle("Agenda de Endereços");
+		alert.setHeaderText("Editar");
+		alert.setContentText("Essa funcionalidade estará disponível na próxima versão do sistema.");
+		alert.showAndWait();
+	}
+	/**
 	 * Fecha a aplicação.
 	 */
 	@FXML
